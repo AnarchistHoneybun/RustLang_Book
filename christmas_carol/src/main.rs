@@ -3,6 +3,10 @@ fn main() {
     let mut i: u8 = 1;
 
     while i <= n {
+
+        // ? how to print the number with the correct suffix
+        // ? (1st, 2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th)
+        // ? without using a match statement
         println!("On the {} day of Christmas my true love sent to me", i);
         match i {
             1 => println!("A partridge in a pear tree"),
