@@ -6,5 +6,6 @@ fn main() {
 
 fn dangler() -> String {
     let s = String::from("hello");
+    // ! This will cause a dangling pointer
     &s
 }
