@@ -1,11 +1,14 @@
 fn main() {
     let mut s = String::from("hello");
 
-    change(&mut s);
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
+    let r3 = &mut s; // BIG PROBLEM
 
-    println!("{}", s);
-}
+    // ! mutable and immutable references in the same scope
+    // ! Rust disallows this
 
-fn change(some_string: &mut String) {
-    some_string.push_str(", world");
+    // ! multiple mutable references to the same location
+    // ! Rust disallows this
+    println!("{}", r3);
 }
