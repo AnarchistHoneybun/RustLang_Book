@@ -1,12 +1,11 @@
 fn main() {
-    let s1 = String::from("buongiorno");
+    let mut s = String::from("hello");
 
-    let len = calculate_length(&s1);
+    change(&mut s);
 
-    println!("The length of '{}' is {}.", s1, len);
+    println!("{}", s);
 }
 
-fn calculate_length(s: &String) -> usize {
-    s.len() // len() returns the length of a String
-
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
 }
