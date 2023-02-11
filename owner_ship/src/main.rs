@@ -10,5 +10,6 @@ fn main() {
 
     // ! multiple mutable references to the same location
     // ! Rust disallows this
+    // ! to prevent race conditions
     println!("{}", r3);
 }
