@@ -6,7 +6,7 @@ struct User {
 }
 
 fn main() {
-    let mut user1 = User {
+    let user1 = User {
         email: String::from("example@something.com"),
         username: String::from("example"),
         active: true,
@@ -14,4 +14,19 @@ fn main() {
     };
 
     println!("User 1: {}", user1.email);
+
+    // TODO make another user using field init shorthand
+    let user2 = make_user(String::from("newexample@something.com"), String::from("newexample"));
+
+    println!("User 2: {}", user2.email);
+    
+}
+
+fn make_user(email: String, username: String) -> User {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
 }
