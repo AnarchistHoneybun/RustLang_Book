@@ -19,6 +19,16 @@ fn main() {
     let user2 = make_user(String::from("newexample@something.com"), String::from("newexample"));
 
     println!("User 2: {}", user2.email);
+
+    // TODO make another user using struct update syntax
+
+    let user3 = User {
+        email: String::from("djkhaledanotherone@something.com"),
+        username: String::from("anotherone"),
+        ..user1
+    };
+
+    println!("User 3: {}", user3.email);
     
 }
 
