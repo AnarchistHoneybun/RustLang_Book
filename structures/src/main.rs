@@ -24,11 +24,11 @@ fn main() {
 
     let user3 = User {
         email: String::from("djkhaledanotherone@something.com"),
-        username: String::from("anotherone"),
         ..user1
     };
 
     println!("User 3: {}", user3.email);
+    println!("User 1: {}", user1.username);
     
 }
 
