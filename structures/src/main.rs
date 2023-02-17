@@ -28,7 +28,7 @@ fn main() {
     };
 
     println!("User 3: {}", user3.email);
-    println!("User 1: {}", user1.username);
+    
     
 }
 
